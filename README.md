@@ -1,7 +1,7 @@
 # 42 Ecole Hakkında
 42, geleneksel eğitim anlayışını değiştiren, yenilikçi ve özgün bir yazılım okulu ağıdır. Tamamen ücretsiz ve öğretmensiz olan bu eğitim modeli, proje tabanlı öğrenme ile öğrencilerin problem çözme ve algoritmik düşünme yeteneklerini geliştirmeyi hedefler. 42 Ecole, dünya çapında birçok kampüste faaliyet göstermektedir ve öğrencilerine iş dünyasında karşılaşacakları gerçek senaryoları sunar.
 
-# Hakkımda
+## Hakkımda
 Ben Sude Naz, 42Kocaeli'de ana eğitim öğrencisiyim ve Ankara Üniversitesinde Bilgisayar Programcılığı okuyorum.
 
 # Projelerim

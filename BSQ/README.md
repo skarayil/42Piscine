@@ -13,7 +13,7 @@ where `rows` receives the number of rows, `columns` receives the number of colum
 ```bash
 ./map_generator.pl 50 50 5 > map7 # Creates a 50x50 map with 5% obstacles
 ```
-### Understanding the map
+## Understanding the map
 
 The map needs to have a header to be read by the program. In this header is gived the amount of lines and the characters for empty, obstacle and full.
 

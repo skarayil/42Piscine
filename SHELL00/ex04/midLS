@@ -1,0 +1,5 @@
+ls -ptm
+# ls: lists the content of the directory
+# -p: Add bar (/) at the end of the director name.
+# -t: Order by modification date, the latest first.
+# -m: separates by commas.

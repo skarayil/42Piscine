@@ -5,7 +5,7 @@
 Ben Sude Naz, 42Kocaeli'de ana eğitim öğrencisiyim ve Ankara Üniversitesinde Bilgisayar Programcılığı okuyorum.
 
 # Projelerim
-42 Ecole'deki eğitim sürecim boyunca geliştirdiğim projeler şunlardır:
+42 Ecole'deki havuz eğitimi sürecim boyunca geliştirdiğim projeler şunlardır:
 - **C Projeleri**: Temel ve ileri seviye C programlama projeleri, veri yapıları ve algoritmalar.
 - **Shell Projeleri**: Unix/Linux ortamında çalıştırılabilen shell uygulamaları.
 - **Rush Projeleri**: Belirli algoritmalar ve veri yapıları üzerine yoğunlaşan mini projeler.

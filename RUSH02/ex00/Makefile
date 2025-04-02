@@ -45,5 +45,5 @@ fclean: clean
 # clean all files and create them again
 re: fclean all
 
-# informs MakeFile that whenever these rules are called they need to be executed
+
 .PHONY: all clean fclean re

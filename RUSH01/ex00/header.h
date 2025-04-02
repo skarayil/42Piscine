@@ -10,16 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Starts a Header Guard
 #ifndef HEADER_H
 # define HEADER_H
 
-// Includes all libraries that will be used
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-// defines the prototypes of the functions that can be called by this header
 
 void	ft_putchar(char c);
 void	print_error(void);

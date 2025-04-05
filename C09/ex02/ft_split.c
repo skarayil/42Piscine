@@ -98,19 +98,21 @@ char	**ft_split(char *str, char *charset)
 }
 
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 	char	*str = "Words to.be/splitted*in@six";
 	char	*sep = "./*@! ";
 	char	**words = ft_split(str, sep);
-	int i = 0;
+	int index = 0;
 
 	printf("Before: %s\nAfter: \n", str);
-	while (words[i])
+	while (words[index])
 	{
-		printf("%s\n", words[i]);
-		free(words[i]);
-		i++;
+		printf("%s\n", words[index]);
+		free(words[index]);
+		index++;
 	}
 	free(words);
 }

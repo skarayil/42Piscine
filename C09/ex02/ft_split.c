@@ -97,6 +97,7 @@ char	**ft_split(char *str, char *charset)
 	return (result);
 }
 
+/*
 int	main(void)
 {
 	char	*str = "Words to.be/splitted*in@six";
@@ -113,3 +114,4 @@ int	main(void)
 	}
 	free(words);
 }
+*/

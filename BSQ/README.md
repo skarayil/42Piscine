@@ -33,6 +33,3 @@ make all
 Then run the executable with a parameter:
 ```bash
 ./bsq ./map/map_name # replace the map_name with the name of existing maps
-```
-## Final grade: Not started :x:
-I didn't subscribe to this project during the Piscine period. All exercises were done after the Piscine end to consolidate knowledge. These exercises didn't have the validation of Moulinette.

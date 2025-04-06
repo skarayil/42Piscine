@@ -19,7 +19,9 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*a = temp;
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	int	v1 = 15;
@@ -37,3 +39,4 @@ int	main(void)
 	printf("Pointer 'b' remains pointing to adress %p, but now that has the value %d stored\n", b, *b);
 
 }
+*/

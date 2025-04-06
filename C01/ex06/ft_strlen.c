@@ -12,17 +12,19 @@
 
 int	ft_strlen(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i])
+	index = 0;
+	while (str[index])
 	{
-		i++;
+		index++;
 	}
-	return (i);
+	return (index);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char	*str = "Hello World!";
@@ -31,3 +33,4 @@ int	main(void)
 	lenght = ft_strlen(str);
 	printf("String: %s\nLenght: %d\n", str, lenght);
 }
+*/

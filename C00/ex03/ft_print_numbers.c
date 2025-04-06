@@ -14,18 +14,19 @@
 
 void	ft_print_numbers(void)
 {
-	char	harf;
+	char	digit;
 
-	harf = '0';
-	while (harf <= '9')
+	digit = '0';
+	while (digit <= '9')
 	{
-		write(1, &harf, 1);
-		harf++;
+		write(1, &digit, 1);
+		digit++;
 	}
 }
 
-
+/*
 int	main(void)
 {
 	ft_print_numbers();
 }
+*/

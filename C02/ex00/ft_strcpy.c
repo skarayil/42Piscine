@@ -10,23 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
 char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (src[i] != '\0')
+	index = 0;
+	while (src[index] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	dest[i] = '\0';
+	dest[index] = '\0';
 	return (dest);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char	dest[] = "Dest";
@@ -36,3 +36,4 @@ int	main(void)
 	ft_strcpy(dest, src);
 	printf("dest after: %s\n", dest);
 }
+*/

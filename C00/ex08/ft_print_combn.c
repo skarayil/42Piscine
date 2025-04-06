@@ -12,58 +12,58 @@
 
 #include <unistd.h>
 
-void	print_combination(int *arr, int n, int is_last)
+void	print_combination(int *arr, int nbr, int last)
 {
 	char	c;
-	int		i;
+	int		index;
 
-	i = 0;
-	while (i < n)
+	index = 0;
+	while (index < nbr)
 	{
-		c = arr[i] + '0';
+		c = arr[index] + '0';
 		write(1, &c, 1);
-		i++;
+		index++;
 	}
-	if (!is_last)
+	if (!last)
 	{
 		write(1, ", ", 2);
 	}
 }
 
-int	is_last_combination(int *arr, int n)
+int	last_combination(int *arr, int nbr)
 {
-	int	i;
+	int	index;
 	int	last;
 
 	last = 1;
-	i = 0;
-	while (i < n)
+	index = 0;
+	while (index < nbr)
 	{
-		if (arr[i] != 10 - n + i)
+		if (arr[i] != 10 - nbr + index)
 		{
 			last = 0;
 			break ;
 		}
-		i++;
+		index++;
 	}
 	return (last);
 }
 
-void	ft_print_combination_recursive(int n, int *arr, int index, int start)
+void	print_combination_recursive(int nbr, int *arr, int index, int start)
 {
-	int	i;
+	int	j;
 
-	if (index == n)
+	if (index == nbr)
 	{
-		print_combination(arr, n, is_last_combination(arr, n));
+		print_combination(arr, nbr, last_combination(arr, nbr));
 		return ;
 	}
-	i = start;
-	while (i <= 9)
+	j = start;
+	while (j <= 9)
 	{
-		arr[index] = i;
-		ft_print_combination_recursive(n, arr, index + 1, i + 1);
-		i++;
+		arr[index] = j;
+		print_combination_recursive(nbr, arr, index + 1, j + 1);
+		j++;
 	}
 }
 
@@ -73,12 +73,13 @@ void	ft_print_combn(int n)
 
 	if (n > 0 && n < 10)
 	{
-		ft_print_combination_recursive(n, arr, 0, 0);
+		print_combination_recursive(n, arr, 0, 0);
 	}
 }
 
-
+/*
 int	main(void)
 {
 	ft_print_combn(2);
 }
+*/

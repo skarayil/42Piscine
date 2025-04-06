@@ -19,30 +19,31 @@ void	ft_putchar(char c)
 
 void	ft_print_comb2(void)
 {
-	int	i;
-	int	j;
+	int	left;
+	int	right;
 
-	i = 0;
-	while (i <= 99)
+	left = 0;
+	while (left <= 99)
 	{
-		j = i + 1;
-		while (j <= 99)
+		right = left + 1;
+		while (left <= 99)
 		{
-			ft_putchar((i / 10) + '0');
-			ft_putchar((i % 10) + '0');
+			ft_putchar((left / 10) + '0');
+			ft_putchar((left % 10) + '0');
 			write(1, " ", 1);
-			ft_putchar((j / 10) + '0');
-			ft_putchar((j % 10) + '0');
-			if (i < 98 || j < 99)
+			ft_putchar((right / 10) + '0');
+			ft_putchar((right % 10) + '0');
+			if (left < 98 || right < 99)
 				write(1, ", ", 2);
-			j++;
+			right++;
 		}
-		i++;
+		left++;
 	}
 }
 
-
+/*
 int	main(void)
 {
 	ft_print_comb2();
 } 
+*/

@@ -15,6 +15,8 @@ void	ft_ft(int *nbr)
 	*nbr = 42;
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
@@ -30,3 +32,4 @@ int	main(void)
 	printf("Pointer 'nbr' remains pointing to adress %p, but now that has the value %d stored\n", nbr, *nbr);
 	printf("Now 'n' has the value %d stored\n", n);
 }
+*/

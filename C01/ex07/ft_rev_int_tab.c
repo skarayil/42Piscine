@@ -12,20 +12,24 @@
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int	i;
+	int	index;
 	int	temp;
 
-	i = 0;
-	while (i < (size / 2))
+	index = 0;
+	size = size - 1;
+	while (index < size)
 	{
-		temp = tab[i];
-		tab[i] = tab[(size - i - 1)];
-		tab[(size - i - 1)] = temp;
-		i++;
+		temp = tab[index];
+		tab[index] = tab[size];
+		tab[size] = temp;
+		index++;
+		size--;
 	}
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	int	tab[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -50,3 +54,4 @@ int	main(void)
 		j++;
 	}
 }
+*/

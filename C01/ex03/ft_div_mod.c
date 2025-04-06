@@ -16,7 +16,9 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*mod = a % b;
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	int a = 45;
@@ -35,3 +37,4 @@ int	main(void)
 	printf("Pointer 'div' remains pointing to adress %p, but now that has the value %d stored\n", div, *div);
 	printf("Pointer 'mod' remains pointing to adress %p, but now that has the value %d stored\n", mod, *mod);
 }
+*/

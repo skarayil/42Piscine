@@ -14,18 +14,19 @@
 
 void	ft_print_alphabet(void)
 {
-	char	harf;
+	char	letter;
 
-	harf = 'a';
-	while (harf <= 'z')
+	letter = 'a';
+	while (letter <= 'z')
 	{
-		write(1, &harf, 1);
-		harf++;
+		write(1, &letter, 1);
+		letter++;
 	}
 }
 
-
+/*
 int	main(void)
 {
 	ft_print_alphabet();
 }
+*/

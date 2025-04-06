@@ -14,18 +14,19 @@
 
 void	ft_print_reverse_alphabet(void)
 {
-	char	harf;
+	char	letter;
 
-	harf = 'z';
-	while (harf >= 'a')
+	letter = 'z';
+	while (letter >= 'a')
 	{
-		write(1, &harf, 1);
-		harf--;
+		write(1, &letter, 1);
+		letter--;
 	}
 }
 
-
+/*
 int	main(void)
 {
 	ft_print_reverse_alphabet();
 }
+*/

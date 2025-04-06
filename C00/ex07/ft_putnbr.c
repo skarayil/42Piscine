@@ -38,7 +38,7 @@ void	ft_putnbr(int nb)
 	}
 }
 
-
+/*
 int	main(void)
 {
 	write(1, "Print a positive number: ", 26);
@@ -53,3 +53,4 @@ int	main(void)
 	ft_putnbr(-2147483648);
 	write(1, "\n", 1);
 }
+*/

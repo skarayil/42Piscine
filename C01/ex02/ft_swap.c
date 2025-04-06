@@ -19,6 +19,8 @@ void	ft_swap(int *a, int *b)
 	*b = temp;
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
@@ -36,3 +38,4 @@ int	main(void)
 	printf("Pointer 'a' remains pointing to adress %p, but now that has the value %d stored\n", a, *a);
 	printf("Pointer 'b' remains pointing to adress %p, but now that has the value %d stored\n", b, *b);
 }
+*/

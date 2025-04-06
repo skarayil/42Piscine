@@ -20,10 +20,11 @@ void	ft_putstr(char *str)
 	}
 }
 
-
+/*
 int	main(void)
 {
-	char	*str = "Print the string";
+	char	*str = "42 Türkiye";
 	
 	ft_putstr(str);
 }
+*/

@@ -12,14 +12,14 @@
 
 char	*ft_strupcase(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] += 'A' - 'a';
-		i++;
+		if (str[index] >= 'a' && str[index] <= 'z')
+			str[index] += 'A' - 'a';
+		index++;
 	}
 	return (str);
 }
@@ -27,7 +27,7 @@ char	*ft_strupcase(char *str)
 
 int	main(void)
 {
-	char	str[] = "all is lowercase";
+	char	str[] = "42ecole";
 
 	printf("Before: %s\n", str);
 	printf("After: %s\n", ft_strupcase(str));

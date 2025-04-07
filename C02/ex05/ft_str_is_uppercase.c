@@ -12,24 +12,27 @@
 
 int	ft_str_is_uppercase(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		if (!(str[i] >= 'A' && str[i] <= 'Z'))
+		if (!(str[index] >= 'A' && str[index] <= 'Z'))
 			return (0);
-		i++;
+		index++;
 	}
 	return (1);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
-	char	*str1 = "WORDSANDLETTERS";
-	char	*str2 = "WORDSANDlETTERS";
+	char	*str1 = "42ECOLE";
+	char	*str2 = "42ecole";
 
 	printf("%s is uppercase? %d\n", str1, ft_str_is_uppercase(str1));	
 	printf("%s is uppercase? %d\n", str2, ft_str_is_uppercase(str2));
 }
+*/

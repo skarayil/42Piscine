@@ -12,18 +12,18 @@
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int	i;
+	unsigned int	index;
 
-	i = 0;
-	while (src[i] != '\0' && i < n)
+	index = 0;
+	while (src[index] != '\0' && index < n)
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	while (i < n)
+	while (index < n)
 	{
-		dest[i] = '\0';
-		i++;
+		dest[index] = '\0';
+		index++;
 	}
 	return (dest);
 }
@@ -31,8 +31,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 int	main(void)
 {
-	char	dest[] = "######";
-	char	src[] = "Source";
+	char	dest[] = "ecole";
+	char	src[] = "42";
 	int	n = 2;
 	
 	printf("dest before: %s\n", dest);

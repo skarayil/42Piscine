@@ -12,28 +12,30 @@
 
 char	*ft_strcapitalize(char *str)
 {
-	int	i;
-	int	is_first;
+	int	index;
+	int	first;
 
-	i = 0;
-	is_first = 1;
-	while (str[i] != '\0')
+	index = 0;
+	first = 1;
+	while (str[index] != '\0')
 	{
-		if (is_first && str[i] >= 'a' && str[i] <= 'z')
-			str[i] += ('A' - 'a');
-		else if (!is_first && str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += ('a' - 'A');
-		is_first = 0;
-		if (!((str[i] >= 'a' && str[i] <= 'z')
-				|| (str[i] >= 'A' && str[i] <= 'Z')
-				|| (str[i] >= '0' && str[i] <= '9')))
-			is_first = 1;
-		i++;
+		if (first && str[index] >= 'a' && str[index] <= 'z')
+			str[index] += ('A' - 'a');
+		else if (!first && str[index] >= 'A' && str[index] <= 'Z')
+			str[index] += ('a' - 'A');
+		first = 0;
+		if (!((str[index] >= 'a' && str[index] <= 'z')
+				|| (str[index] >= 'A' && str[index] <= 'Z')
+				|| (str[index] >= '0' && str[index] <= '9')))
+			first = 1;
+		index++;
 	}
 	return (str);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char	str[] = "OLA, tudo BEM? 42palavras QUARENTA-e-duas; cinquenta+E+UM";
@@ -41,3 +43,4 @@ int	main(void)
 	printf("Before: %s\n", str);
 	printf("After: %s\n", ft_strcapitalize(str));
 }
+*/

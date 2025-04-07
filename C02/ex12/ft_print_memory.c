@@ -30,21 +30,21 @@ void	print_address(void *addr)
 {
 	unsigned long	address;
 	char			address_str[16];
-	int				i;
+	int				index;
 
 	address = (unsigned long)addr;
-	i = 15;
+	index = 15;
 	while (i >= 0)
 	{
-		address_str[i] = "0123456789abcdef"[address % 16];
+		address_str[index] = "0123456789abcdef"[address % 16];
 		address /= 16;
-		i--;
+		index--;
 	}
-	i = 0;
-	while (i < 16)
+	index = 0;
+	while (index < 16)
 	{
-		ft_putchar(address_str[i]);
-		i++;
+		ft_putchar(address_str[index]);
+		index++;
 	}
 }
 
@@ -58,27 +58,27 @@ void    print_char(unsigned char c)
 
 void	print_memory_content(unsigned char *ptr, unsigned int size)
 {
-	unsigned int	i;
+	unsigned int	index;
 
-	i = 0;
-	while (i < 16)
+	index = 0;
+	while (index < 16)
 	{
-		if (i < size)
-			print_hex(ptr[i]);
+		if (index < size)
+			print_hex(ptr[index]);
 		else
 		{
 			ft_putchar(' ');
 			ft_putchar(' ');
 		}
-		if (i % 2 == 1)
+		if (index % 2 == 1)
 			ft_putchar(' ');
-		i++;
+		index++;
 	}
-	i = 0;
-    while (i < size && i < 16)
+	index = 0;
+    while (index < size && index < 16)
     {
-        print_char(ptr[i]);
-        i++;
+        print_char(ptr[index]);
+        index++;
     }
 
 }
@@ -86,24 +86,25 @@ void	print_memory_content(unsigned char *ptr, unsigned int size)
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned char	*ptr;
-	unsigned int	i;
+	unsigned int	index;
 
 	if (size == 0)
 		return (addr);
 	ptr = (unsigned char *)addr;
-	i = 0;
-	while (i < size)
+	index = 0;
+	while (index < size)
 	{
-		print_address(ptr + i);
+		print_address(ptr + index);
 		ft_putchar(':');
 		ft_putchar(' ');
-		print_memory_content(ptr + i, size - i);
+		print_memory_content(ptr + index, size - index);
 		ft_putchar('\n');
-		i += 16;
+		index += 16;
 	}
 	return (addr);
 }
 
+/*
 int main()
 {
     char *str = "Bu bir deneme metnidir. Lütfen bir daha böyle zor bir soru gelmesin!";
@@ -111,3 +112,4 @@ int main()
 
     ft_print_memory(dizi, 2);
 }
+*/

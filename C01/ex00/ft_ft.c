@@ -32,4 +32,20 @@ int	main(void)
 	printf("Pointer 'nbr' remains pointing to adress %p, but now that has the value %d stored\n", nbr, *nbr);
 	printf("Now 'n' has the value %d stored\n", n);
 }
+
+
+#include <unistd.h>
+
+int main()
+{
+	int var = 31;
+	int *nbr = &var;
+	ft_ft(nbr);
+	char c1 = '0' + var / 10;
+	char c2 = '0' + var % 10;
+	write(1, &c1, 1);
+    	write(1, &c2, 1);
+
+	return (0);
+}
 */

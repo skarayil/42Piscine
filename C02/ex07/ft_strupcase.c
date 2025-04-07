@@ -24,7 +24,9 @@ char	*ft_strupcase(char *str)
 	return (str);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char	str[] = "42ecole";
@@ -32,3 +34,4 @@ int	main(void)
 	printf("Before: %s\n", str);
 	printf("After: %s\n", ft_strupcase(str));
 } 
+*/

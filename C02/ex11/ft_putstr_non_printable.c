@@ -19,14 +19,14 @@ void	ft_putchar(char c)
 
 void	ft_putstr_non_printable(char *str)
 {
-	int				i;
-	unsigned char	c;
 	char			hex_digits[2];
+	unsigned char	c;
+	int				index;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		c = (unsigned char)str[i];
+		c = (unsigned char)str[index];
 		if (c < 32 || c == 127)
 		{
 			ft_putchar('\\');
@@ -39,13 +39,13 @@ void	ft_putstr_non_printable(char *str)
 		{
 			ft_putchar(c);
 		}
-		i++;
+		index++;
 	}
 }
 
 
 int	main(void)
 {
-	char *str = "Ola\nesta bem?";
+	char *str = "\n";
 	ft_putstr_non_printable(str);
 }

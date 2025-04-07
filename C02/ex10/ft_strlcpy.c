@@ -12,34 +12,33 @@
 
 unsigned int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	index = -1;
+	while (++str[index])
+	return (index);
 }
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	src_len;
-	unsigned int	i;
+	unsigned int	index;
 
 	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
-	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	index = 0;
+	while (src[index] != '\0' && index < size - 1)
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	dest[i] = '\0';
+	dest[index] = '\0';
 	return (src_len);
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
@@ -49,3 +48,4 @@ int	main(void)
 
 	printf("src: %s\nlenght returned: %d\ndest: %s\n", src, ft_strlcpy(dest, src, n), dest);
 }
+*/

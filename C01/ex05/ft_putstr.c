@@ -23,7 +23,7 @@ void	ft_putstr(char *str)
 /*
 int	main(void)
 {
-	char	*str = "42 Türkiye";
+	char	*str = "42 Ecole";
 	
 	ft_putstr(str);
 }

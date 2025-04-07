@@ -12,25 +12,28 @@
 
 int	ft_str_is_alpha(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		if (!((str[i] >= 'a' && str[i] <= 'z')
-				|| (str[i] >= 'A' && str[i] <= 'Z')))
+		if (!((str[index] >= 'a' && str[index] <= 'z')
+				|| (str[index] >= 'A' && str[index] <= 'Z')))
 			return (0);
-		i++;
+		index++;
 	}
 	return (1);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
-	char	*str1 = "T stndo";
-	char	*str2 = "Testndo";
+	char	*str1 = "42 ecole";
+	char	*str2 = "42ecole";
 
 	printf("%s is alpha? %d\n", str1, ft_str_is_alpha(str1));	
 	printf("%s is alpha? %d\n", str2, ft_str_is_alpha(str2));	
 }
+*/

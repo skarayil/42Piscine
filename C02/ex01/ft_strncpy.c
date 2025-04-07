@@ -28,7 +28,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char	dest[] = "ecole";
@@ -39,3 +41,4 @@ int	main(void)
 	ft_strncpy(dest, src, n);
 	printf("dest after: %s\n", dest);
 }
+*/

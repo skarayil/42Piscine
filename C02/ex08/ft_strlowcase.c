@@ -12,23 +12,26 @@
 
 char	*ft_strlowcase(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 'a' - 'A';
-		i++;
+		if (str[index] >= 'A' && str[index] <= 'Z')
+			str[index] += 'a' - 'A';
+		index++;
 	}
 	return (str);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
-	char	str[] = "ALL IS UPPERCASE";
+	char	str[] = "42ECOLE";
 
 	printf("Before: %s\n", str);
 	printf("After: %s\n", ft_strlowcase(str));
 }
+*/

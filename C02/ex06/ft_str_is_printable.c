@@ -12,24 +12,24 @@
 
 int	ft_str_is_printable(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		if ((str[i] >= 0 && str[i] <= 31) || str[i] == 127)
+		if ((*str >= 0 && *str <= 31) || *str == 127)
 			return (0);
-		i++;
+		str++;
 	}
 	return (1);
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	char	*str1 = "aB3/!'.;Ko+";
-	char	*str2 = "aB3/!'.;Ko±";
+	char	*str1 = "42ecole";
+	char	*str2 = "42\necole";
 
 	printf("%s is printable? %d\n", str1, ft_str_is_printable(str1));	
 	printf("%s is printable? %d\n", str2, ft_str_is_printable(str2));
 }
+*/

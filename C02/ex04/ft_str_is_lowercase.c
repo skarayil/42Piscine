@@ -27,7 +27,7 @@ int	ft_str_is_lowercase(char *str)
 int	main(void)
 {
 	char	*str1 = "42ecole";
-	char	*str2 = "42Ecole";
+	char	*str2 = "42ECOLE";
 
 	printf("%s is lowercase? %d\n", str1, ft_str_is_lowercase(str1));	
 	printf("%s is lowercase? %d\n", str2, ft_str_is_lowercase(str2));

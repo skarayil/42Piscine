@@ -39,7 +39,7 @@ int	last_combination(int *arr, int nbr)
 	index = 0;
 	while (index < nbr)
 	{
-		if (arr[i] != 10 - nbr + index)
+		if (arr[index] != 10 - nbr + index)
 		{
 			last = 0;
 			break ;

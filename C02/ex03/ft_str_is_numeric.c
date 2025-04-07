@@ -12,19 +12,21 @@
 
 int	ft_str_is_numeric(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
+		if (!(str[index] >= '0' && str[index] <= '9'))
 			return (0);
-		i++;
+		index++;
 	}
 	return (1);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char	*str1 = "012356789";
@@ -33,3 +35,4 @@ int	main(void)
 	printf("%s is numeric? %d\n", str1, ft_str_is_numeric(str1));	
 	printf("%s is numeric? %d\n", str2, ft_str_is_numeric(str2));
 }
+*/

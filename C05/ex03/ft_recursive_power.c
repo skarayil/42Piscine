@@ -19,11 +19,14 @@ int	ft_recursive_power(int nb, int power)
 	return (nb * ft_recursive_power(nb, power - 1));
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	printf("Power of 2 ^ -1 = %d\n", ft_recursive_power(2, -1));
 	printf("Power of 0 ^ 0 = %d\n", ft_recursive_power(0, 0));
 	printf("Power of 3 ^ 1 = %d\n", ft_recursive_power(3, 1));
 	printf("Power of -3 ^ 3 = %d\n", ft_recursive_power(-3, 3));
-} 
+}
+*/

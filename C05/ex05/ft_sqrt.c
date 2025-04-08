@@ -12,20 +12,22 @@
 
 int	ft_sqrt(int nb)
 {
-	int	i;
+	int	index;
 
 	if (nb <= 0)
 		return (0);
-	i = 1;
-	while (i <= nb / i)
+	index = 1;
+	while (index <= nb / index)
 	{
-		if (i * i == nb)
-			return (i);
-		i++;
+		if (index * index == nb)
+			return (index);
+		index++;
 	}
 	return (0);
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
@@ -35,3 +37,4 @@ int	main(void)
 	printf("Square Root of 10: %d\n", ft_sqrt(10));
 	printf("Square Root of 25: %d\n", ft_sqrt(25));
 }
+*/

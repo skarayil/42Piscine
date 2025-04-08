@@ -10,44 +10,47 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	index;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	index = -1;
+	while (str[++index]) 
+	
+	return (index);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	dest_len;
 	unsigned int	src_len;
-	unsigned int	i;
+	unsigned int	index;
 
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-	i = 0;
+	index = 0;
 	if (size <= dest_len)
 		return (size + src_len);
-	while (src[i] && dest_len + i < size - 1)
+	while (src[index] && dest_len + index < size - 1)
 	{
-		dest[dest_len + i] = src[i];
-		i++;
+		dest[dest_len + index] = src[index];
+		index++;
 	}
-	dest[dest_len + i] = '\0';
+	dest[dest_len + index] = '\0';
 	return (dest_len + src_len);
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	char	dest[10] = "dest";
-	char	src[10] = "src";
+	char	dest[10] = "42";
+	char	src[10] = "ecole";
 	int	size = 6;
 
 	printf("Dest Before: %s\n", dest);
 	printf("Return of strlcat: %d\n", ft_strlcat(dest, src, size));
 	printf("Dest after: %s\n", dest);
 }
+*/

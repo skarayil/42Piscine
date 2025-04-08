@@ -22,7 +22,7 @@ void	ft_putnbr(int nb)
 	long	temp;
 
 	temp = nb;
-	if (temp < 0)
+	if (nb < 0)
 	{
 		ft_putchar('-');
 		temp = -temp;
@@ -30,15 +30,15 @@ void	ft_putnbr(int nb)
 	if (temp > 9)
 	{
 		ft_putnbr(temp / 10);
-		ft_putchar(temp % 10 + '0');
+		ft_putchar((char)((temp % 10) + '0'));
 	}
 	else
 	{
-		ft_putchar(temp + '0');
+		ft_putchar((char)(temp + '0'));
 	}
 }
 
-
+/*
 int	main(void)
 {
 	write(1, "Print a positive number: ", 26);
@@ -53,3 +53,4 @@ int	main(void)
 	ft_putnbr(-2147483648);
 	write(1, "\n", 1);
 }
+*/

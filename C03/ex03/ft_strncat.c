@@ -12,37 +12,39 @@
 
 int	ft_strlen(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	index = -1;
+	while (++str[index])
+	return (index);
 }
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	dest_len;
-	unsigned int	i;
+	unsigned int	index;
 
 	dest_len = ft_strlen(dest);
-	i = 0;
-	while (src[i] && i < nb)
+	index = 0;
+	while (src[index] && index < nb)
 	{
-		dest[dest_len + i] = src[i];
-		i++;
+		dest[dest_len + index] = src[index];
+		index++;
 	}
-	dest[dest_len + i] = '\0';
+	dest[dest_len + index] = '\0';
 	return (dest);
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	char	dest[10] = "dest";
-	char	src[10] = "src";
-	int	n = 2;
+	char	dest[10] = "42";
+	char	src[10] = "ecole ";
+	int	n = 5;
 
 	ft_strncat(dest, src, n);
 	printf("%s", dest);
 }
+*/

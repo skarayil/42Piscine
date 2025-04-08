@@ -15,7 +15,7 @@ int	ft_strlen(char *str)
 	int	index;
 
 	index = -1;
-	while (++str[index])
+	while (str[++index])
 	return (index);
 }
 

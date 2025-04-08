@@ -19,10 +19,14 @@ int	ft_recursive_factorial(int nb)
 	return (nb * ft_recursive_factorial(nb - 1));
 }
 
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
-	printf("Fatorial de -1 = %d\n", ft_recursive_factorial(-1));
-	printf("Fatorial de 0 = %d\n", ft_recursive_factorial(0));
-	printf("Fatorial de 1 = %d\n", ft_recursive_factorial(1));
-	printf("Fatorial de 5 = %d\n", ft_recursive_factorial(5));
+	printf("Fatorial of -1 = %d\n", ft_recursive_factorial(-1));
+	printf("Fatorial of 0 = %d\n", ft_recursive_factorial(0));
+	printf("Fatorial of 1 = %d\n", ft_recursive_factorial(1));
+	printf("Fatorial of 5 = %d\n", ft_recursive_factorial(5));
 }
+*/

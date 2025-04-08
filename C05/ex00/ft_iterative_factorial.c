@@ -12,26 +12,31 @@
 
 int	ft_iterative_factorial(int nb)
 {
-	int	i;
+	int	index;
 	int	result;
 
 	if (nb < 0)
 		return (0);
 	if (nb == 0 || nb == 1)
 		return (1);
-	i = 1;
+	index = 1;
 	result = 1;
-	while (i <= nb)
+	while (index <= nb)
 	{
-		result *= i;
-		i++;
+		result *= index;
+		index++;
 	}
 	return (result);
 }
 
+/*
+#include <stdio.h>
+
+int	main(void)
 {
-	printf("Fatorial de -1 = %d\n", ft_iterative_factorial(-1));
-	printf("Fatorial de 0 = %d\n", ft_iterative_factorial(0));
-	printf("Fatorial de 1 = %d\n", ft_iterative_factorial(1));
-	printf("Fatorial de 5 = %d\n", ft_iterative_factorial(5));
+	printf("Fatorial of -1 = %d\n", ft_iterative_factorial(-1));
+	printf("Fatorial of 0 = %d\n", ft_iterative_factorial(0));
+	printf("Fatorial of 1 = %d\n", ft_iterative_factorial(1));
+	printf("Fatorial of 5 = %d\n", ft_iterative_factorial(5));
 }
+*/

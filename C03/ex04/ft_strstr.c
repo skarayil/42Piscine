@@ -35,7 +35,9 @@ char	*ft_strstr(char *str, char *to_find)
 	return (NULL);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char *str = "Try to find this part of the text";
@@ -43,3 +45,4 @@ int	main(void)
 
 	printf("Returned: %s\n", ft_strstr(str, to_find));
 }
+*/

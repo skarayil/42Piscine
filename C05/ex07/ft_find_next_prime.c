@@ -12,16 +12,16 @@
 
 int	ft_is_prime(int nb)
 {
-	int	i;
+	int	index;
 
 	if (nb <= 1)
 		return (0);
-	i = 2;
-	while (i <= nb / i)
+	index = 2;
+	while (index <= nb / index)
 	{
-		if (nb % i == 0)
+		if (nb % index == 0)
 			return (0);
-		i++;
+		index++;
 	}
 	return (1);
 }
@@ -35,7 +35,9 @@ int	ft_find_next_prime(int nb)
 	return (nb);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	printf("What is the next prime of -3? %d\n", ft_find_next_prime(-3));
@@ -44,3 +46,4 @@ int	main(void)
 	printf("What is the next prime of 25? %d\n", ft_find_next_prime(25));
 	printf("What is the next prime of 84? %d\n", ft_find_next_prime(84));
 }
+*/

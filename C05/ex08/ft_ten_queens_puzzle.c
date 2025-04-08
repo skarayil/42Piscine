@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-// #include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -23,90 +20,72 @@ void	ft_putchar(char c)
 // function that prints the founded solution
 void	ft_print_solution(int *chessboard)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-    // prints the position of each queen on the board
-	while (i < 10)
-		ft_putchar(chessboard[i++] + '0');
+	index = 0;
+	while (index < 10)
+		ft_putchar(chessboard[index++] + '0');
 	ft_putchar('\n');
 }
 
 // Check if two queens can attack each other in a given position
-int	attack_possibility(int *chessboard, int p)
+int	attack_possibility(int *chessboard, int pos)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-    // Checks all previous positions
-	while (i < p)
+	index = 0;
+	while (index < pos)
 	{
-        // check if there are two queens in the same column
-		if (chessboard[i] == chessboard[p] && i != p)
+		if (chessboard[index] == chessboard[pos] && index != pos)
 			return (1);
-		if (i != p)
+		if (index != pos)
 		{
-            // Check if there are two queens in the same diagonal
-            // If so, the return is 1
-			if (chessboard[i] == chessboard[p] - (p - i)
-				|| chessboard[i] == chessboard[p] + (p - i))
+			if (chessboard[index] == chessboard[pos] - (pos - index)
+				|| chessboard[index] == chessboard[pos] + (pos - index))
 				return (1);
 		}
-		i++;
+		index++;
 	}
-    // return 0 when there are no possibility of attacks between queens
 	return (0);
 }
 
-void	ft_ten_queens_puzzle_recursive(int chessboard[], int p, int *solutions)
+void	ft_ten_queens_puzzle_recursive(int chessboard[], int pos, int *solutions)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-    // checks if all queens have been positioned
-    // If so, the solution is printed
-	if (p == 10)
+	index = 0;
+	if (pos == 10)
 	{
 		ft_print_solution(chessboard);
-
-        // increases the number of founded solutions
 		(*solutions)++; 
 	}
 	else
 	{
-        // Put the queens in all columns without chance for attacks
-		while (i <= 9)
+		while (index <= 9)
 		{
-            // assign the position to the queen
-			chessboard[p] = i;
-
-            // Check the possibilities of attacks between the queens
-            // only advances to the next position when there is no possibility of attack
-			if (!attack_possibility(chessboard, p))
-				ft_ten_queens_puzzle_recursive(chessboard, p + 1, solutions);
-			i++;
+			chessboard[pos] = index;
+			if (!attack_possibility(chessboard, pos))
+				ft_ten_queens_puzzle_recursive(chessboard, pos + 1, solutions);
+			index++;
 		}
 	}
 }
 
 int	ft_ten_queens_puzzle(void)
 {
-    // array to store the positions of the queens
 	int	chessboard[10];
 	int	solutions;
 
-    // number of solutions found initially is zero
 	solutions = 0;
-
-    // Find all possible solutions
-    // 'Solutions' is sent as a pointer
 	ft_ten_queens_puzzle_recursive(chessboard, 0, &solutions);
-
-    // Returns the total number of solutions found
 	return (solutions);
 }
+
+/*
+#include <stdio.h>
 
 int main()
 {
     printf("Solutions founded: %d\n", ft_ten_queens_puzzle());
 } 
+*/

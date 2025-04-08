@@ -13,24 +13,26 @@
 int	ft_check_base(char *base)
 {
 	int	len;
-	int	i;
+	int	index;
 
 	len = 0;
 	while (base[len] != '\0')
 	{
 		if (base[len] == '+' || base[len] == '-')
 			return (0);
-		i = 0;
-		while (base[i] != '\0')
+		index = 0;
+		while (base[index] != '\0')
 		{
-			if (base[len] == base[i] && len != i)
+			if (base[len] == base[index] && len != index)
 				return (0);
-			i++;
+			index++;
 		}
 		len++;
 	}
 	return (len > 1);
 }
+
+#include <unistd.h>
 
 void	ft_putnbr_base(int nbr, char *base)
 {
@@ -57,7 +59,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		write(1, &base[temp], 1);
 }
 
-
+/*
 int	main(void)
 {
 	int	n = 42;
@@ -77,3 +79,4 @@ int	main(void)
 	write(1, "\n", 1);
 
 }
+*/

@@ -19,6 +19,8 @@ int	ft_fibonacci(int index)
 	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
@@ -29,3 +31,4 @@ int	main(void)
 	printf("The 3º fibonacci is %d\n", ft_fibonacci(3));
 	printf("The 10º fibonacci is %d\n", ft_fibonacci(10));
 }
+*/

@@ -12,30 +12,29 @@
 
 int	ft_strlen(const char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	index = -1;
+	while (str[++index])
+	return (index);
 }
 
 int	ft_check_base(const char *base)
 {
 	int	len;
-	int	i;
+	int	index;
 
 	len = 0;
 	while (base[len] != '\0')
 	{
 		if (base[len] == '+' || base[len] == '-')
 			return (0);
-		i = 0;
-		while (base[i] != '\0')
+		index = 0;
+		while (base[index] != '\0')
 		{
-			if (base[len] == base[i] && len != i)
+			if (base[len] == base[index] && len != index)
 				return (0);
-			i++;
+			index++;
 		}
 		len++;
 	}
@@ -44,11 +43,11 @@ int	ft_check_base(const char *base)
 
 int	ft_to_decimal_base(const char *str, const char *base, int base_len)
 {
-	int	sayi;
+	int	nbr;
 	int	i;
 	int	j;
 
-	sayi = 0;
+	nbr = 0;
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -57,15 +56,15 @@ int	ft_to_decimal_base(const char *str, const char *base, int base_len)
 			j++;
 		if (base[j] == '\0')
 			break ;
-		sayi = sayi * base_len + j;
+		nbr = nbr * base_len + j;
 		i++;
 	}
-	return (sayi);
+	return (nbr);
 }
 
 int	ft_atoi_base(const char *str, const char *base)
 {
-	int	isaret;
+	int	sign;
 	int	base_len;
 
 	if (!ft_check_base(base))
@@ -73,20 +72,23 @@ int	ft_atoi_base(const char *str, const char *base)
 	base_len = ft_strlen(base);
 	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
-	isaret = 1;
+	sign = 1;
 	while (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			isaret = -isaret;
+			sign = -sign;
 		str++;
 	}
-	return (ft_to_decimal_base(str, base, base_len) * isaret);
+	return (ft_to_decimal_base(str, base, base_len) * sign);
 }
 
-
+/*
+#include <stdio.h>
+	
 int		main(void)
 {
 	printf("%d\n", ft_atoi_base("	+++++--10", "0123456789"));
 	printf("%d\n", ft_atoi_base(" --101010", "01"));
 	printf("%d\n", ft_atoi_base(" 	+---539", "0123456789abcdef"));
 }
+*/

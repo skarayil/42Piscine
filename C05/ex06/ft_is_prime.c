@@ -12,21 +12,23 @@
 
 int	ft_is_prime(int nb)
 {
-	int	i;
+	int	index;
 
 	if (nb <= 1)
 		return (0);
-	i = 2;
-	while (i <= nb / i)
+	index = 2;
+	while (index <= nb / index)
 	{
-		if (nb % i == 0)
+		if (nb % index == 0)
 			return (0);
-		i++;
+		index++;
 	}
 	return (1);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	printf("-7 is prime? %d\n", ft_is_prime(-7));
@@ -37,3 +39,4 @@ int	main(void)
 	printf("6 is prime? %d\n", ft_is_prime(6));
 	printf("23 is prime? %d\n", ft_is_prime(23));
 }
+*/

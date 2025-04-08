@@ -12,36 +12,38 @@
 
 int	ft_strlen(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	index = -1;
+	while (++str[index])
+	return (index);
 }
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int	dest_len;
-	int	i;
+	int	index;
 
 	dest_len = ft_strlen(dest);
-	i = 0;
-	while (src[i])
+	index = 0;
+	while (src[index])
 	{
-		dest[i + dest_len] = src[i];
-		i++;
+		dest[index + dest_len] = src[index];
+		index++;
 	}
-	dest[i + dest_len] = '\0';
+	dest[index + dest_len] = '\0';
 	return (dest);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
-	char	dest[10] = "dest";
-	char	src[10] = "src";
+	char	dest[10] = "42";
+	char	src[10] = "ecole";
 
 	ft_strcat(dest, src);
 	printf("String: %s\n", dest);
 }
+*/

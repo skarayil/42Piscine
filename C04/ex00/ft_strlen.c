@@ -12,18 +12,21 @@
 
 int	ft_strlen(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	index = -1;
+	while (str[++index]) 
+	
+	return (index);
 }
 
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	char	*str = "letters";
+	char	*str = "42ecole";
 
 	printf("The string %s has a lenght of %d\n", str, ft_strlen(str));
 }
+*/

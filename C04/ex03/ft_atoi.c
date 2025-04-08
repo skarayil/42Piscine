@@ -10,36 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
 int	ft_atoi(char *str)
 {
-	int	isaret;
-	int	nb;
+	int	sign;
+	int	result;
 
 	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
-	isaret = 1;
+	sign = 1;
 	while (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			isaret = -isaret;
+			sign = -sign;
 		str++;
 	}
-	nb = 0;
+	result = 0;
 	while (*str >= '0' && *str <= '9')
 	{
-		nb *= 10;
-		nb += *str - '0';
+		result *= 10;
+		result += *str - '0';
 		str++;
 	}
-	return (nb * isaret);
+	return (sign * result);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	char *n = " ---+--+1234ab567";
 
-	printf("My: %d\n", ft_atoi(n));
+	printf("%d\n", ft_atoi(n));
 }
+*/

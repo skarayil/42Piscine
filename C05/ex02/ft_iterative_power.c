@@ -12,24 +12,26 @@
 
 int	ft_iterative_power(int nb, int power)
 {
-	int	i;
+	int	index;
 	int	result;
 
 	if (power < 0)
 		return (0);
 	if (power == 0)
 		return (1);
-	i = 0;
+	index = 0;
 	result = 1;
-	while (i < power)
+	while (index < power)
 	{
 		result *= nb;
-		i++;
+		index++;
 	}
 	return (result);
 }
 
-
+/*
+#include <stdio.h>
+	
 int	main(void)
 {
 	printf("Power of 2 ^ -1 = %d\n", ft_iterative_power(2, -1));
@@ -37,3 +39,4 @@ int	main(void)
 	printf("Power of 3 ^ 1 = %d\n", ft_iterative_power(3, 1));
 	printf("Power of -3 ^ 3 = %d\n", ft_iterative_power(-3, 3));
 }
+*/

@@ -10,26 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_strcmp(char *str1, char *str2)
 {
 	int	i;
-	int	fark;
+	int	diff;
 
 	i = 0;
 	while (str1[i] && str2[i] && str1[i] == str2[i])
 		i++;
 	if (str1[i] == str2[i])
-		fark = 0;
+		diff = 0;
 	else if (str1[i] - str2[i] < 0)
-		fark = -1;
+		diff = -1;
 	else
-		fark = 1;
-	return (fark);
+		diff = 1;
+	return (diff);
 }
 
-void	ft_print_params(char **argv, int argc)
+#include <unistd.h>
+
+void	ft_print_params(int argc, char *argv[])
 {
 	int		i;
 	char	*temp;
@@ -39,25 +39,22 @@ void	ft_print_params(char **argv, int argc)
 	{
 		temp = argv[i];
 		while (*temp)
-		{
-			write(1, temp, 1);
-			temp++;
-		}
+			write(1, temp++, 1);
 		write(1, "\n", 1);
 		i++;
 	}
 }
 
-void	ft_sort_params(int argc, char **argv)
+void	ft_sort_params(int argc, char *argv[])
 {
 	int		i;
+	int		change;
 	char	*temp;
-	int		is_change;
 
-	is_change = 1;
-	while (is_change)
+	change = 1;
+	while (change)
 	{
-		is_change = 0;
+		change = 0;
 		i = 1;
 		while (i < argc - 1)
 		{
@@ -66,14 +63,14 @@ void	ft_sort_params(int argc, char **argv)
 				temp = argv[i];
 				argv[i] = argv[i + 1];
 				argv[i + 1] = temp;
-				is_change = 1;
+				change = 1;
 			}
 			i++;
 		}
 	}
 }
 
-int	main(int argc, char **argv)
+int	main(int argc, char *argv[])
 {
 	if (argc > 2)
 	{

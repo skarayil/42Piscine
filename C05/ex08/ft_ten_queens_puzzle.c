@@ -17,7 +17,6 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-// function that prints the founded solution
 void	ft_print_solution(int *chessboard)
 {
 	int	index;
@@ -28,7 +27,6 @@ void	ft_print_solution(int *chessboard)
 	ft_putchar('\n');
 }
 
-// Check if two queens can attack each other in a given position
 int	attack_possibility(int *chessboard, int pos)
 {
 	int	index;

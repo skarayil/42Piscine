@@ -34,7 +34,7 @@ int	ft_iterative_power(int nb, int power)
 	
 int	main(void)
 {
-	printf("Power of 2 ^ -1 = %d\n", ft_iterative_power(2, -1));
+	printf("Power of 2 ^ -1 = %d\n", ft_iterative_power(3, -1));
 	printf("Power of 0 ^ 0 = %d\n", ft_iterative_power(0, 0));
 	printf("Power of 3 ^ 1 = %d\n", ft_iterative_power(3, 1));
 	printf("Power of -3 ^ 3 = %d\n", ft_iterative_power(-3, 3));

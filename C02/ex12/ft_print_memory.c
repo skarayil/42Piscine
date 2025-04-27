@@ -34,7 +34,7 @@ void	print_address(void *addr)
 
 	address = (unsigned long)addr;
 	index = 15;
-	while (i >= 0)
+	while (index >= 0)
 	{
 		address_str[index] = "0123456789abcdef"[address % 16];
 		address /= 16;

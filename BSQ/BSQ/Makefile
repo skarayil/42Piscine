@@ -11,18 +11,18 @@
 # **************************************************************************** #
 
 
-NAME			= bsq
-CC			= gcc
-RM			= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I include
+NAME		= bsq
+CC		= gcc
+RM		= rm -f
+CFLAGS		= -Wall -Wextra -Werror -I include
 
-SRC			= src/ft_util.c \
-			  src/ft_create_map.c \
-			  src/ft_get_matrix.c \
-			  src/ft_process_map.c \
-			  src/main.c
+SRC		= src/ft_util.c \
+		  src/ft_create_map.c \
+		  src/ft_get_matrix.c \
+		  src/ft_process_map.c \
+		  src/main.c
 
-OBJS			= ${SRC:.c=.o}
+OBJS		= ${SRC:.c=.o}
 
 %.o: %.c
 	${CC} ${CFLAGS} -c $< -o $@

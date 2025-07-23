@@ -17,8 +17,6 @@
 
 ## 🏫 42 Ecole Hakkında
 
-<img align="right" alt="42 Logo" width="120" src="https://raw.githubusercontent.com/42School/norminette/master/42_logo.png">
-
 **42**, geleneksel eğitim anlayışını kökten değiştiren, **yenilikçi ve özgün** bir yazılım geliştirici okulu ağıdır. 
 
 ### ✨ 42'nin Özellikleri:

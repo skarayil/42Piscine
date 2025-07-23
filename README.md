@@ -188,6 +188,12 @@ En büyük kareyi bulma algoritmasını içeren optimizasyon projesi:
 
 ---
 
+### 👨‍💻 Created by Sude Naz Karayıldırım
+
+[![42 Profile](https://img.shields.io/badge/42%20Profile-skarayil-black?style=flat-square&logo=42&logoColor=white)](https://profile.intra.42.fr/users/skarayil)
+[![GitHub](https://img.shields.io/badge/GitHub-skarayil-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/skarayil)
+
+**⭐ Eğer bu proje işinize yaradıysa, repo'ya star vermeyi unutmayın!**
+
 </div>
 
-### Created by Sude Naz Karayıldırım

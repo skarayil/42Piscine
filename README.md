@@ -9,7 +9,7 @@
 
 **42Kocaeli Ana Eğitim Öğrencisi | Ankara Üniversitesi Öğrencisi**
 
-[GitHub](https://github.com/sudenazkarayildirim) • [LinkedIn](https://linkedin.com/in/sudenazkarayildirim) • [42 Profil](https://profile.intra.42.fr/users/sukaraya)
+[GitHub](https://github.com/skarayil) • [LinkedIn](https://linkedin.com/in/skarayil) • [42 Profil](https://profile.intra.42.fr/users/skarayil)
 
 </div>
 

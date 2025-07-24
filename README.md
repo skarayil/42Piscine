@@ -85,8 +85,8 @@ const sudeNaz = {
 
 Temel ve ileri seviye C programlama projeleri, veri yapıları ve algoritmalar üzerine yoğunlaştım:
 
-| Gün | Proje | Konular | Durum |
-|-----|-------|---------|-------|
+| Proje | Kazanımlar | Konular |
+|-------|------------|---------|
 | **C00** | İlk C Fonksiyonları | Printf, karakterler, sayılar |
 | **C01** | Pointerlar | Pointer basics, swap fonksiyonları |
 | **C02** | Stringler | String manipülasyonu, karakter dizileri |

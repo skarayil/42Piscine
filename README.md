@@ -182,12 +182,6 @@ En büyük kareyi bulma algoritmasını içeren optimizasyon projesi:
 
 ---
 
-**⭐ Eğer projelerimi beğendiysen, repo'larıma star vermeyi unutma!**
-
-*"In 42, we don't just learn to code, we learn to think."* 🧠💡
-
----
-
 ### 👨‍💻 Created by Sude Naz Karayıldırım
 
 [![42 Profile](https://img.shields.io/badge/42%20Profile-skarayil-black?style=flat-square&logo=42&logoColor=white)](https://profile.intra.42.fr/users/skarayil)
